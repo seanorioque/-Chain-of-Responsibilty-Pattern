@@ -15,10 +15,10 @@ public class Peso20Dispenser implements DispenseChain {
             int remainder = cur.getAmount() % 20; //300
             System.out.println("Dispensing " + num + " 20 bills");
             if (remainder != 0) {
-                this.chain.dispense(new Currency(remainder));
+                System.out.println("Cannot dispense remaining amount: " + remainder);
             }
         } else {
-            this.chain.dispense(cur);
+            System.out.println("Cannot dispense amount: " + cur.getAmount());
         }
     }
 }
